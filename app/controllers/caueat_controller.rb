@@ -28,4 +28,8 @@ class CaueatController < ApplicationController
       ]
     @pub_selected = @pub_list.sample
   end
+  
+  def dbrest
+    @dbrestaurant = Restaurant.all
+  end
 end
