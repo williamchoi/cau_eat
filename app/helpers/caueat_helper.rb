@@ -1,0 +1,2 @@
+module CaueatHelper
+end
