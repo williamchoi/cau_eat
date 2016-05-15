@@ -7,12 +7,28 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 restaurant_list = [
-  [ "유정쌈밥", "http://map.naver.com/?menu=route&mapMode=0&lat=37.5080454&lng=126.962057&dlevel=11&enc=b64" ],
-  [ "뚝배기스파게티", "http://map.naver.com/?menu=location&mapMode=0&lat=37.5063093&lng=126.9616486&dlevel=12&searchCoord=126.9568643%3B37.5062298&query=7KSR7JWZ64yAIOyasOuHveyKpO2MjOqyjO2LsA%3D%3D&mpx=09590105%3A37.5062298%2C126.9568643%3AZ11%3A0.0226005%2C0.0117399&tab=1&enc=b64" ],
-  [ "육쌈냉면", "http://map.naver.com/?menu=route&mapMode=0&lat=37.5072046&lng=126.9597108&dlevel=11&enc=b64" ],
-  [ "맥도날드", "http://map.naver.com/?menu=location&mapMode=0&lat=37.5062569&lng=126.9588555&dlevel=12&searchCoord=126.9573775%3B37.5048873&query=7KSR7JWZ64yAIOunpeuPhOuCoOuTnA%3D%3D&mpx=09590105%3A37.5048873%2C126.9573775%3AZ12%3A0.0113000%2C0.0058700&tab=1&enc=b64" ]
+  [ "유정쌈밥", "1", "2" ],
+  [ "뚝배기스파게티", "3", "4" ],
+  [ "육쌈냉면", "5", "6" ],
+  [ "맥도날드",  "7", "8" ]
 ]
 
-restaurant_list.each do |t, m|
-  Restaurant.create( title: t, map: m )
+restaurant_list.each do |title, mapx, mapy|
+  Restaurant.create( title: title, mapx: mapx, mapy: mapy )
+end
+
+pub_list = [
+  ["레드락","1","2"],
+  ["봉구비어","1","2"],
+  ["삼거리포차","3","4"],
+  ["스파이키","7","5"],
+  ["옹골진","7","5"],
+  ["잠꾸러기","3","4"],
+  ["장독대","1","3"],
+  ["캐빈","6","5"],
+  ["프렌즈","2","4"]
+]
+
+pub_list.each do |title, mapx, mapy|
+  Pub.create( title: title, mapx: mapx, mapy: mapy )
 end

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   
   get 'caueat/restaurant'
   get 'caueat/pub' => "caueat#pub"
-  get 'caueat/dbrest' => "caueat#dbrest"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
